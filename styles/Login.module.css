@@ -1,4 +1,4 @@
 .main {
-  left: 50%;
+  display: flex;
+  justify-content: center;
 }
-/* left off here! */

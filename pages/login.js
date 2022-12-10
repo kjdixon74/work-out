@@ -1,9 +1,10 @@
 import { useAppContext } from "../components/context";
 import LoginForm from "../components/loginForm";
+import styles from "../styles/Login.module.css";
 
 export default function Login() {
   const users = useAppContext();
-  console.log(users);
+  console.log("Users:", users);
 
-  return <main>{LoginForm()}</main>;
+  return <main className={styles.main}>{LoginForm()}</main>;
 }

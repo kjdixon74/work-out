@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-// Bootstrap NavBar
+// Bootstrap NavBar w/ fixed top & scrolling toggler
 export default function NavBar() {
   const router = useRouter();
 
   return (
-    <nav className="navbar navbar-expand-lg bg-secondary bg-gradient fixed-top">
+    <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid">
         <Link className="navbar-brand" href="/">
           Workout Wellness
@@ -23,7 +23,7 @@ export default function NavBar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
             <li className="nav-item">
               <Link
                 className={
