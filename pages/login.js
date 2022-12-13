@@ -8,3 +8,5 @@ export default function Login() {
 
   return <main className={styles.main}>{LoginForm()}</main>;
 }
+
+// COME BACK TO! Need to grab all users from database and store in variable once!
