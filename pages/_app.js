@@ -7,7 +7,7 @@ import NavBar from "../components/navBar";
 function MyApp({ Component, pageProps }) {
   // Import bundled Bootstrap JavaScript after fully rendered; because of Next.js' server-side rendering, document object is not ready until the page is fully loaded
   useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.min.js");
+    import("bootstrap/dist/js/bootstrap");
   }, []);
 
   return (

@@ -29,3 +29,5 @@ createUserWithEmailAndPassword(auth, email, password)
     const errorMessage = error.message;
     // ..
   });
+
+// Resume at firebase
