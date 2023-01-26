@@ -62,14 +62,14 @@ export default function NavBar() {
             <li className="nav-item">
               <Link
                 className={
-                  router.pathname === "/exercises"
+                  router.pathname === "/calendar"
                     ? "nav-link active"
                     : "nav-link"
                 }
                 aria-current="page"
-                href="/exercises"
+                href="/calendar"
               >
-                Exercises
+                Calendar
               </Link>
             </li>
             <li className="nav-item">
@@ -82,28 +82,6 @@ export default function NavBar() {
                 href="/favorite"
               >
                 Favorites
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={
-                  router.pathname === "/sweat" ? "nav-link active" : "nav-link"
-                }
-                href="/sweat"
-              >
-                Ready to Sweat?
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={
-                  router.pathname === "/history"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-                href="/history"
-              >
-                History
               </Link>
             </li>
           </ul>
