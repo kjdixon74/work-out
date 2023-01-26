@@ -27,23 +27,36 @@ export default function NavBar() {
             <li className="nav-item">
               <Link
                 className={
+                  router.pathname === "/demo" ? "nav-link active" : "nav-link"
+                }
+                aria-current="page"
+                href="/demo"
+              >
+                Demo
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={
+                  router.pathname === "/createAccount"
+                    ? "nav-link active"
+                    : "nav-link"
+                }
+                aria-current="page"
+                href="/createAccount"
+              >
+                Create Account
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={
                   router.pathname === "/login" ? "nav-link active" : "nav-link"
                 }
                 aria-current="page"
                 href="/login"
               >
                 Login
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={
-                  router.pathname === "/logout" ? "nav-link active" : "nav-link"
-                }
-                aria-current="page"
-                href="/logout"
-              >
-                Logout
               </Link>
             </li>
             <li className="nav-item">
@@ -62,19 +75,6 @@ export default function NavBar() {
             <li className="nav-item">
               <Link
                 className={
-                  router.pathname === "/calendar"
-                    ? "nav-link active"
-                    : "nav-link"
-                }
-                aria-current="page"
-                href="/calendar"
-              >
-                Calendar
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={
                   router.pathname === "/favorite"
                     ? "nav-link active"
                     : "nav-link"
@@ -82,6 +82,17 @@ export default function NavBar() {
                 href="/favorite"
               >
                 Favorites
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className={
+                  router.pathname === "/logout" ? "nav-link active" : "nav-link"
+                }
+                aria-current="page"
+                href="/logout"
+              >
+                Logout
               </Link>
             </li>
           </ul>

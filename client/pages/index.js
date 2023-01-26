@@ -1,7 +1,12 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
+  function loadPage(event) {
+    console.log(event.target);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -14,44 +19,28 @@ export default function Home() {
         <h1 className={styles.title}>Welcome to Workout Wellness!</h1>
 
         <p className={styles.description}>
-          We're here to help you manage your strength training workouts, so you
-          can achieve your fitness goals.
+          Log your workouts, track your progress, and achieve your fitness
+          goals.
         </p>
 
         <div className={styles.grid}>
-          <div className={styles.card}>
-            <h2>Exercises &rarr;</h2>
-            <p>
-              Add your favorite upper body, core, and lower body exercises and
-              any equipment
-              <br />
-              <br />
-              Don't forget the squats!
-            </p>
-          </div>
+          <Link href="/demo" className={styles.card}>
+            <h2>Curious how it works? &rarr;</h2>
+            <p>See for yourself before signing up.</p>
+          </Link>
 
-          <div className={styles.card}>
-            <h2>Workouts &rarr;</h2>
+          <Link href="/createAccount" className={styles.card}>
+            <h2>Ready to get started? &rarr;</h2>
             <p>
-              Build a workout based on your exercises! Decide what sets and reps
-              per workout.
-              <br />
-              <br />
-              For your leg day, you can add 12 sets of squats for 3 reps!
+              You just need your name, email, and a password to create an
+              account.
             </p>
-          </div>
+          </Link>
 
-          <div className={styles.card}>
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </div>
-
-          <div className={styles.card}>
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </div>
+          <Link href="login" className={styles.card}>
+            <h2>Already have an account? &rarr;</h2>
+            <p>Login to pick up where you left off.</p>
+          </Link>
         </div>
       </main>
 
