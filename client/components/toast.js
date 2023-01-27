@@ -1,25 +1,19 @@
 export default function Toast() {
   return (
     <div
-      className="toast"
+      className="toast align-items-center text-bg-primary border-0"
       role="alert"
       aria-live="assertive"
       aria-atomic="true"
     >
-      <div className="toast-body">
-        Hello, world! This is a toast message.
-        <div className="mt-2 pt-2 border-top">
-          <button type="button" className="btn btn-primary btn-sm">
-            Take action
-          </button>
-          <button
-            type="button"
-            className="btn btn-secondary btn-sm"
-            data-bs-dismiss="toast"
-          >
-            Close
-          </button>
-        </div>
+      <div className="d-flex">
+        <div className="toast-body">Hello, world! This is a toast message.</div>
+        <button
+          type="button"
+          className="btn-close btn-close-white me-2 m-auto"
+          data-bs-dismiss="toast"
+          aria-label="Close"
+        ></button>
       </div>
     </div>
   );

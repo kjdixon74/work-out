@@ -1,17 +1,22 @@
 // DON'T FORGET TO REFACTOR
-import ComboBox from "../components/comboBox";
+import Types from "./types";
 
-export default function Workouts() {
+export default function Workout() {
   // Bootstrap Form
   return (
     <form>
       <fieldset>
-        <legend>Log Your Workout</legend>
         <div className="mb-3">
-          <label forhtml="exercise" className="form-label">
-            Exercise
+          <label forhtml="date" className="form-label">
+            Date
           </label>
-          {ComboBox()}
+          <input type="date" id="date" className="form-control" />
+        </div>
+        <div className="mb-3">
+          <label forhtml="type" className="form-label">
+            Type
+          </label>
+          <Types />
         </div>
         <div className="mb-3">
           <label forhtml="reps" className="form-label">
@@ -47,7 +52,7 @@ export default function Workouts() {
           />
         </div>
         <button type="submit" className="btn btn-primary">
-          Submit
+          Log Workout
         </button>
       </fieldset>
     </form>
