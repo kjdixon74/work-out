@@ -3,10 +3,6 @@ import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
 export default function Home() {
-  function loadPage(event) {
-    console.log(event.target);
-  }
-
   return (
     <div className={styles.container}>
       <Head>
