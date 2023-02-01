@@ -7,8 +7,7 @@ export default function Modal() {
     <>
       <button
         type="button"
-        className="btn btn-primary log-workout-modal"
-        id={styles.modalBtn}
+        className={`btn btn-primary log-workout-modal ${styles.modalBtn}`}
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >

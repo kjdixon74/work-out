@@ -16,7 +16,7 @@ export default class Demo extends React.Component {
           <FullCalendar
             plugins={[dayGridPlugin, interactionPlugin]}
             initialView="dayGridMonth"
-            events={[{ title: "workout 1", date: "2023-01-01" }]}
+            events={[{ title: "workout 1", date: "2023-02-01" }]}
             dateClick={this.handleDateClick}
           />
         </div>
@@ -26,7 +26,15 @@ export default class Demo extends React.Component {
 
   handleDateClick = (arg) => {
     // bind with an arrow function
-    // alert(arg.dateStr);
+    const dateStr = arg.dateStr;
+    const year = dateStr.slice(0, 4);
+    const month = dateStr.slice(5, 7);
+    const day = dateStr.slice(8, 10);
+    const date = `${month}/${day}/${year}`;
+
+    console.log(date);
     document.querySelector(".log-workout-modal").click();
   };
 }
+
+// come back here - trying to figure out how to pass date clicked to workout form

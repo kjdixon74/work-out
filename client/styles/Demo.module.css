@@ -1,10 +1,9 @@
 .container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-#modalBtn {
-  position: absolute;
-  left: 80%;
+.modalBtn {
+  align-self: flex-end;
 }
-
-/* left off here - need to make modal and toast responsive */
