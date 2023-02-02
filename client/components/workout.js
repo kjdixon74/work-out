@@ -1,8 +1,9 @@
-// DON'T FORGET TO REFACTOR
+// DON'T FORGET TO REFACTOR and do input validation (could prob use some from login form)
+// left off here - take a step back and learn how events gets put on the calendar! then come back to dates on form
 import Types from "./types";
 
 export default function Workout() {
-  // Bootstrap Form
+  // Bootstrap Form with customized date field
   return (
     <form>
       <fieldset>
@@ -10,7 +11,37 @@ export default function Workout() {
           <label forhtml="date" className="form-label">
             Date
           </label>
-          <input type="date" id="date" className="form-control" />
+          <span className="form-control">
+            <input
+              type="text"
+              id="month"
+              name="month"
+              placeholder="mm"
+              required
+              size="3"
+              pattern="[0-9]{2}"
+            />{" "}
+            / <></>
+            <input
+              type="text"
+              id="day"
+              name="day"
+              placeholder="dd"
+              required
+              size="3"
+              pattern="[0-9]{2}"
+            />{" "}
+            / <></>
+            <input
+              type="text"
+              id="year"
+              name="year"
+              placeholder="yyyy"
+              required
+              size="5"
+              pattern="[2][0][2][0-9]"
+            />
+          </span>
         </div>
         <div className="mb-3">
           <label forhtml="type" className="form-label">
