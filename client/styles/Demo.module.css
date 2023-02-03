@@ -4,6 +4,14 @@
   gap: 10px;
 }
 
+/* .badgeGoals {
+  align-self: flex-start;
+} */
+
+.progressGoals {
+  align-self: center;
+}
+
 .modalBtn {
   align-self: flex-end;
 }

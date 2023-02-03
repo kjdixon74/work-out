@@ -3,6 +3,8 @@ import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
 import ToastEl from "../components/toast";
+import Badge from "../components/badge";
+import Progress from "../components/progress";
 import Modal from "../components/modal";
 import styles from "../styles/Demo.module.css";
 
@@ -12,6 +14,8 @@ export default class Demo extends React.Component {
       <div>
         <ToastEl />
         <div className={styles.container}>
+          {/* <Badge /> */}
+          <Progress />
           <Modal />
           <FullCalendar
             plugins={[dayGridPlugin, interactionPlugin]}

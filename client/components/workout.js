@@ -1,5 +1,4 @@
 // DON'T FORGET TO REFACTOR and do input validation (could prob use some from login form)
-// left off here - take a step back and learn how events gets put on the calendar! then come back to dates on form
 import Types from "./types";
 
 export default function Workout() {
