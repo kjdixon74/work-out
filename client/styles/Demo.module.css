@@ -4,17 +4,14 @@
   gap: 10px;
 }
 
-.popover,
-.progressGoals {
+.popover {
   align-self: center;
 }
 
 .progressGoals {
-  min-width: 150px;
+  margin-top: 10px;
 }
 
 .modalBtn {
   align-self: flex-end;
 }
-
-/* left off here - adjusting width of progress bar and then add link in popover */

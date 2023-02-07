@@ -4,7 +4,6 @@ import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 import interactionPlugin from "@fullcalendar/interaction"; // needed for dayClick
 import ToastEl from "../components/toast";
 import PopoverGoals from "../components/popover";
-import Progress from "../components/progress";
 import Modal from "../components/modal";
 import styles from "../styles/Demo.module.css";
 
@@ -15,7 +14,6 @@ export default class Demo extends React.Component {
         <ToastEl />
         <div className={styles.container}>
           <PopoverGoals />
-          <Progress />
           <Modal />
           <FullCalendar
             plugins={[dayGridPlugin, interactionPlugin]}
@@ -41,4 +39,4 @@ export default class Demo extends React.Component {
   };
 }
 
-// come back here - trying to figure out how to pass date clicked to workout form
+// TODOs: add more toasts for further instructions to user, figure out how to pass date clicked on calendar to workout form

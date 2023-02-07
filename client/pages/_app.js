@@ -20,8 +20,9 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp;
 
-// 1) Implemented Next.js for its routing
+// 1) Implement Next.js for its routing
 // 2) Bootstrap NavBar
-// 3) NavBar routing among pages
-// 4) Share user context among pages
-// 5) Login/logout components
+// 3) Next.js linking & routing among NavBar
+// 4) Share user context among NavBar and components
+// 5) Home component -> Demo, Create Account, & Login
+// 6) Once logged in -> "Home/Calendar", Goals, Favorites, & Logout

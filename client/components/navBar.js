@@ -88,3 +88,5 @@ export default function NavBar() {
     </nav>
   );
 }
+
+// TODOs: toggle between login and logout status
