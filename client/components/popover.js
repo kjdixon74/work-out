@@ -17,12 +17,13 @@ export default function PopoverGoals() {
 
   return (
     <div className={styles.popover}>
+      <Progress />
       <OverlayTrigger
-        trigger="click"
-        key="top"
-        placement="top"
+        trigger="focus"
+        key="bottom"
+        placement="bottom"
         overlay={
-          <Popover id="popover-positioned-top">
+          <Popover id="popover-positioned-bottom">
             <Popover.Header as="h3">💪 Current Goals</Popover.Header>
             <Popover.Body>
               <ul>
@@ -38,11 +39,10 @@ export default function PopoverGoals() {
       >
         <Button variant="secondary">Goals Reached</Button>
       </OverlayTrigger>
-      <Progress />
     </div>
   );
 }
 
-// Lesson learned - nested progress with popover (instead of importing separately in demo) to make progress the same width as popover; then added margin-top to progress
+// Lesson learned - nested progress with popover (instead of importing separately in demo) to make progress the same width as popover; then added margin-bottom to progress
 
-// TODOs: fix popup from going off the page, fix popup from overlapping workout form, change goals to logged in user's goals
+// TODOs: change goals to logged in user's goals

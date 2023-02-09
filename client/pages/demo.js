@@ -10,18 +10,16 @@ import styles from "../styles/Demo.module.css";
 export default class Demo extends React.Component {
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         <ToastEl />
-        <div className={styles.container}>
-          <PopoverGoals />
-          <Modal />
-          <FullCalendar
-            plugins={[dayGridPlugin, interactionPlugin]}
-            initialView="dayGridMonth"
-            events={[{ title: "workout 1", date: "2023-02-01" }]}
-            dateClick={this.handleDateClick}
-          />
-        </div>
+        <PopoverGoals />
+        <Modal />
+        <FullCalendar
+          plugins={[dayGridPlugin, interactionPlugin]}
+          initialView="dayGridMonth"
+          events={[{ title: "workout 1", date: "2023-02-01" }]}
+          dateClick={this.handleDateClick}
+        />
       </div>
     );
   }
@@ -39,4 +37,4 @@ export default class Demo extends React.Component {
   };
 }
 
-// TODOs: add more toasts for further instructions to user, figure out how to pass date clicked on calendar to workout form
+// TODOs: figure out how to pass date clicked on calendar to workout form, add responsive styling
