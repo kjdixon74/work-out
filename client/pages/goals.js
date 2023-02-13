@@ -1,87 +1,30 @@
+import Col from "react-bootstrap/Col";
+import ListGroup from "react-bootstrap/ListGroup";
+import Row from "react-bootstrap/Row";
+import Tab from "react-bootstrap/Tab";
+
+// React Bootstrap List Group
 export default function Goals() {
-  // Bootstrap List Group
   return (
-    <div className="row">
-      <div className="col-4">
-        <div className="list-group" id="list-tab" role="tablist">
-          <a
-            className="list-group-item list-group-item-action active"
-            id="list-home-list"
-            data-bs-toggle="list"
-            href="#list-home"
-            role="tab"
-            aria-controls="list-home"
-          >
-            Home
-          </a>
-          <a
-            className="list-group-item list-group-item-action"
-            id="list-profile-list"
-            data-bs-toggle="list"
-            href="#list-profile"
-            role="tab"
-            aria-controls="list-profile"
-          >
-            Profile
-          </a>
-          <a
-            className="list-group-item list-group-item-action"
-            id="list-messages-list"
-            data-bs-toggle="list"
-            href="#list-messages"
-            role="tab"
-            aria-controls="list-messages"
-          >
-            Messages
-          </a>
-          <a
-            className="list-group-item list-group-item-action"
-            id="list-settings-list"
-            data-bs-toggle="list"
-            href="#list-settings"
-            role="tab"
-            aria-controls="list-settings"
-          >
-            Settings
-          </a>
-        </div>
-      </div>
-      <div className="col-8">
-        <div className="tab-content" id="nav-tabContent">
-          <div
-            className="tab-pane fade show active"
-            id="list-home"
-            role="tabpanel"
-            aria-labelledby="list-home-list"
-          >
-            ...
-          </div>
-          <div
-            className="tab-pane fade"
-            id="list-profile"
-            role="tabpanel"
-            aria-labelledby="list-profile-list"
-          >
-            ...
-          </div>
-          <div
-            className="tab-pane fade"
-            id="list-messages"
-            role="tabpanel"
-            aria-labelledby="list-messages-list"
-          >
-            ...
-          </div>
-          <div
-            className="tab-pane fade"
-            id="list-settings"
-            role="tabpanel"
-            aria-labelledby="list-settings-list"
-          >
-            ...
-          </div>
-        </div>
-      </div>
-    </div>
+    <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
+      <Row>
+        <Col sm={4}>
+          <ListGroup>
+            <ListGroup.Item action href="#link1">
+              Link 1
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link2">
+              Link 2
+            </ListGroup.Item>
+          </ListGroup>
+        </Col>
+        <Col sm={8}>
+          <Tab.Content>
+            <Tab.Pane eventKey="#link1">1</Tab.Pane>
+            <Tab.Pane eventKey="#link2">2</Tab.Pane>
+          </Tab.Content>
+        </Col>
+      </Row>
+    </Tab.Container>
   );
 }
