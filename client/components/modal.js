@@ -1,8 +1,12 @@
 import Workout from "./workout";
 import styles from "../styles/Demo.module.css";
 
+// Bootstrap Modal
 export default function Modal() {
-  // Bootstrap Modal
+  function closeForm() {
+    // Clear date
+    document.querySelector("#date").value = "";
+  }
   return (
     <>
       <button
@@ -32,6 +36,7 @@ export default function Modal() {
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                onClick={closeForm}
               ></button>
             </div>
             <div className="modal-body">

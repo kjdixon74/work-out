@@ -26,15 +26,15 @@ export default class Demo extends React.Component {
 
   handleDateClick = (arg) => {
     // bind with an arrow function
-    const dateStr = arg.dateStr;
-    const year = dateStr.slice(0, 4);
-    const month = dateStr.slice(5, 7);
-    const day = dateStr.slice(8, 10);
-    const date = `${month}/${day}/${year}`;
+    const date = arg.date.toISOString().substring(0, 10);
 
-    console.log(date);
+    // Open workout form
     document.querySelector(".log-workout-modal").click();
+
+    // Set date to date clicked on calendar
+    document.querySelector("#date").value = date;
   };
 }
+// Lesson learned: must set date in ISO format (YYYY-MM-DD)
 
-// TODOs: figure out how to pass date clicked on calendar to workout form, add responsive styling
+// TODOs: add responsive styling; once form is successfully filled out, validated, and submitted, add event to calendar; allow user to click on event and see details of workout

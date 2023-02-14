@@ -1,8 +1,7 @@
-// DON'T FORGET TO REFACTOR and do input validation (could prob use some from login form)
 import { useState } from "react";
 import Types from "./types";
 
-// Bootstrap Form with customized date field
+// Bootstrap Form
 export default function Workout() {
   const [typeSelected, setTypeSelected] = useState(false);
   const [exercises, setExercises] = useState([]);
@@ -40,7 +39,6 @@ export default function Workout() {
   const strength = [{ label: "Squats", id: 1 }];
   // body weight, lifting weights, using a resistance band
   // HIIT & Crossfit
-  // left off here!
 
   const flexibility = [
     { label: "Foam Rolling", id: 1 },
@@ -81,37 +79,12 @@ export default function Workout() {
           <label forhtml="date" className="form-label">
             Date
           </label>
-          <span className="form-control">
-            <input
-              type="text"
-              id="month"
-              name="month"
-              placeholder="mm"
-              required
-              size="3"
-              pattern="[0-9]{2}"
-            />{" "}
-            / <></>
-            <input
-              type="text"
-              id="day"
-              name="day"
-              placeholder="dd"
-              required
-              size="3"
-              pattern="[0-9]{2}"
-            />{" "}
-            / <></>
-            <input
-              type="text"
-              id="year"
-              name="year"
-              placeholder="yyyy"
-              required
-              size="5"
-              pattern="[2][0][2][0-9]"
-            />
-          </span>
+          <input
+            type="date"
+            className="form-control"
+            id="date"
+            required
+          ></input>
         </div>
         <div className="mb-3">
           <label forhtml="type" className="form-label">
@@ -163,13 +136,14 @@ export default function Workout() {
             className="form-control"
             placeholder="Any notes or comments you would like to add"
           />
-        </div>
+        </div> */}
         <button type="submit" className="btn btn-primary">
           Log Workout
-        </button> */}
+        </button>
       </fieldset>
     </form>
   );
 }
 
+// TODOs: input validation (see login form validation); refactor
 // left off here - look at MUI alert message in console
