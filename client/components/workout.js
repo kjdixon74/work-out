@@ -146,4 +146,4 @@ export default function Workout() {
 }
 
 // TODOs: input validation (see login form validation); refactor
-// left off here - look at MUI alert message in console
+// left off here - new Material UI error
