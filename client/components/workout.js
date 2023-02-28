@@ -5,6 +5,7 @@ import Types from "./types";
 export default function Workout() {
   const [typeSelected, setTypeSelected] = useState(false);
   const [exercises, setExercises] = useState([]);
+  const [exerciseSelected, setExerciseSelected] = useState(null);
 
   const typesOfExercises = [
     { label: "Balance", id: 1 },
@@ -46,7 +47,7 @@ export default function Workout() {
   ];
 
   // Refactor?
-  function changeInput(input) {
+  function selectInput(input) {
     if (input === "Balance") {
       setExercises(balance);
       setTypeSelected(true);
@@ -72,6 +73,13 @@ export default function Workout() {
     }
   }
 
+  function selectExercise(input) {
+    // Come back to strength
+    if (input === "Strength") return;
+
+    // For all others, show duration input
+  }
+
   return (
     <form>
       <fieldset>
@@ -93,16 +101,32 @@ export default function Workout() {
           <Types
             label="The type of your exercise"
             options={typesOfExercises}
-            onInputChange={changeInput}
+            onInputChange={selectInput}
           />
         </div>
         {typeSelected ? (
-          <div className="mb-3">
-            <label forhtml="exercise" className="form-label">
-              Exercise
-            </label>
-            <Types label="Your specific exercise" options={exercises} />
-          </div>
+          <>
+            <div className="mb-3">
+              <label forhtml="exercise" className="form-label">
+                Exercise
+              </label>
+              <Types
+                label="Your specific exercise"
+                options={exercises}
+                onInputChange={selectInput}
+              />
+            </div>
+            <div className="mb-3">
+              <label forhtml="duration" className="form-label">
+                Duration
+              </label>
+              <input
+                id="duration"
+                className="form-control"
+                placeholder="Duration of workout"
+              ></input>
+            </div>
+          </>
         ) : null}
         {/* <div className="mb-3">
           <label forhtml="reps" className="form-label">
@@ -146,4 +170,3 @@ export default function Workout() {
 }
 
 // TODOs: input validation (see login form validation); refactor
-// left off here - new Material UI error

@@ -9,7 +9,6 @@ export function UserContext({ children }) {
       email: "kat@gmail.com",
       password: "secret",
       loggedIn: false,
-      exercises: [{ name: "squat", musclegroup: "lower body" }],
     },
   ];
 

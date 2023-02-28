@@ -6,6 +6,9 @@ export default function Modal() {
   function closeForm() {
     // Clear date
     document.querySelector("#date").value = "";
+
+    // Clear type
+    // left off here - trying to figure out how to clear type when form closed - need something that re-renders or changes without re-rendering - useState vs. useRef
   }
   return (
     <>
