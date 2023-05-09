@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
 import Row from "react-bootstrap/Row";
@@ -5,17 +6,23 @@ import Tab from "react-bootstrap/Tab";
 
 // React Bootstrap List Group
 export default function Goals() {
+  const [goals, setGoals] = useState([
+    "Strength train 3x week",
+    "Cardio 2x week",
+    "Yoga 5x week",
+    "Swim 2x week",
+  ]);
+
   return (
     <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
       <Row>
         <Col sm={4}>
           <ListGroup>
-            <ListGroup.Item action href="#link1">
-              Link 1
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link2">
-              Link 2
-            </ListGroup.Item>
+            {goals.map((goal, index) => (
+              <ListGroup.Item action href="#link1" key={index}>
+                {goal}
+              </ListGroup.Item>
+            ))}
           </ListGroup>
         </Col>
         <Col sm={8}>
